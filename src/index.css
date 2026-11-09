@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E9E6E3;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0E0E10;
+}
+::-webkit-scrollbar-thumb {
+  background: #3730A3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4F46E5;
+}
+
+/* Editorial Typography Helpers */
+.text-stroke-dark {
+  -webkit-text-stroke: 1.5px #111111;
+  color: transparent;
+}
+.dark .text-stroke-dark {
+  -webkit-text-stroke: 1.5px #F3EFEA;
+  color: transparent;
+}
+
+.text-stroke-thick {
+  -webkit-text-stroke: 2.5px #111111;
+  color: transparent;
+}
+.dark .text-stroke-thick {
+  -webkit-text-stroke: 2.5px #F3EFEA;
+  color: transparent;
+}
+
+/* Grain overlay for paper/editorial print texture */
+.paper-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+.dark .paper-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Fluid display text scaling */
+.font-huge {
+  font-size: clamp(4.5rem, 18vw, 19rem);
+  line-height: 0.85;
+}
+
+.font-editorial-sub {
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  line-height: 0.9;
+}
+
+/* Custom cursor hide default on desktop when active */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor {
+    cursor: none !important;
+  }
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor [role="button"] {
+    cursor: none !important;
+  }
+}
+
