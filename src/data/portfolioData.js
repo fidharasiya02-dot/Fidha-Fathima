@@ -17,7 +17,7 @@ export const portfolioData = {
     name: "Fidha",
     fullName: "Fidha Fathima",
     college: "Thejus Engineering College",
-    degree: "B.Tech in Computer Science & Engineering",
+    degree: "B.Tech in Computer Science & Artificial Intelligence",
     batch: "Class of 2026",
     location: "Thrissur, Kerala, India",
     email: "fidhafathima@gmail.com",
@@ -66,12 +66,6 @@ export const portfolioData = {
       url: "https://linkedin.com/in/fidhafathima",
       handle: "in/fidhafathima",
       icon: "Linkedin",
-    },
-    {
-      name: "Instagram",
-      url: "https://instagram.com/fidhafathima",
-      handle: "@fidhafathima",
-      icon: "Instagram",
     },
     {
       name: "Behance",

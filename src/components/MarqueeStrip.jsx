@@ -12,11 +12,10 @@ export const MarqueeStrip = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden whitespace-nowrap py-3.5 select-none ${
-        dark
+      className={`relative w-full overflow-hidden whitespace-nowrap py-3.5 select-none ${dark
           ? 'bg-ink-light text-canvas-light dark:bg-card-dark dark:text-white'
           : 'bg-accent text-white'
-      } ${className}`}
+        } ${className}`}
     >
       <div className={`flex w-max ${reverse ? 'animate-marquee-reverse' : speedClass}`}>
         {[...Array(6)].map((_, i) => (
